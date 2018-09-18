@@ -1,0 +1,30 @@
+<table>
+  <thead>
+  <tr>
+    <td>Titre</td>
+    <td>Titre</td>
+    <td>Auteur</td>
+    <td>Prix</td>
+    <td>Note</td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let book of booksList$ |async">
+    <td>
+      <img [src]="book.image">
+    </td>
+    <td>
+      {{book.title}}
+    </td>
+    <td>
+      {{book.author}}
+    </td>
+    <td>
+      {{book.price |currency:'EUR'}}
+    </td>
+    <td>
+      {{book.rating}}
+    </td>
+  </tr>
+  </tbody>
+</table>
